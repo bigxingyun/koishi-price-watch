@@ -1,0 +1,60 @@
+{
+  "name": "koishi-plugin-price-watch",
+  "version": "0.0.1",
+  "description": "Koishi 硬件价格监控插件：盯显卡 / 内存条 / 固态硬盘，出报纸风格日报、性价比榜与天梯图",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "readme.md"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsc -b -w --preserveWatchOutput",
+    "clean": "node -e \"require('fs').rmSync('lib',{recursive:true,force:true});require('fs').rmSync('tsconfig.tsbuildinfo',{force:true})\""
+  },
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin",
+    "price",
+    "monitor",
+    "gpu",
+    "ddr",
+    "ssd",
+    "hardware",
+    "taobao",
+    "jd"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigxingyun/koishi-price-watch.git"
+  },
+  "homepage": "https://github.com/bigxingyun/koishi-price-watch#readme",
+  "bugs": {
+    "url": "https://github.com/bigxingyun/koishi-price-watch/issues"
+  },
+  "license": "MIT",
+  "author": "bigxingyun",
+  "peerDependencies": {
+    "koishi": "^4.18.0",
+    "playwright-core": ">=1.40.0"
+  },
+  "peerDependenciesMeta": {
+    "playwright-core": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "koishi": "^4.18.11",
+    "playwright-core": "^1.64.1",
+    "typescript": "^5.9.0"
+  },
+  "koishi": {
+    "description": {
+      "zh": "盯显卡 / 内存条 / 固态硬盘的价格，出报纸风格日报、性价比榜与天梯图；支持手动录入、淘宝仿真采集与外部爬虫导入。",
+      "en": "Track GPU / RAM / SSD prices with newspaper-style daily reports, value ranking and GPU ladder. Manual entry, Taobao simulation and external crawler ingestion supported."
+    }
+  }
+}
